@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 
-model = joblib.load('xgb_model.pkl')
+model = joblib.load('2602148814.pkl')
 
 def main():
     st.title('Machine Learning Model Deployment')
