@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 model = joblib.load('2602148814.pkl')
 
 def main():
-    st.title('Machine Learning Model Deployment')
+    st.title('UTS Model Deployment')
 
     credit_score = st.number_input('Credit Score', min_value=0, max_value=850)
     age = st.number_input('Age', min_value=18, max_value=100)
@@ -40,7 +40,7 @@ def main():
         else:
             output_text = "Customer likely to churn"
 
-        st.success(f'The prediction is: {output_text}')
+        st.success(f'{output_text}')
 
 def make_prediction(features):
     input_array = np.array(features).reshape(1, -1)
