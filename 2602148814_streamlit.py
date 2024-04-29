@@ -16,14 +16,14 @@ def main():
         tenure = st.selectbox('Tenure', ['0','1','2','3','4','5','6','7','8','9','10'])  
         num_of_products = st.number_input('Number of Products', min_value=1, max_value=4, step=1)
 
-    with col2:
-        geography = st.radio('Geography', ['Spain', 'France', 'Germany'])  
-        gender = st.radio('Gender', ['Male', 'Female']) 
+    with col2: 
         has_cr_card = st.selectbox('Has Credit Card?', ['Yes', 'No']) 
         is_active_member = st.selectbox('Is Active Member?', ['Yes', 'No'])  
-
+    
     balance = st.slider('Balance', min_value=0.0, max_value=238387.56)
     estimated_salary = st.slider('Estimated Salary', min_value=0.0, max_value=199992.48)
+    geography = st.radio('Geography', ['Spain', 'France', 'Germany'])  
+        gender = st.radio('Gender', ['Male', 'Female'])
     
     if st.button('Make Prediction'):
         label_encoder = LabelEncoder()
