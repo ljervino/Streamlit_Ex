@@ -8,17 +8,21 @@ model = joblib.load('2602148814.pkl')
 def main():
     st.title('UTS Model Deployment')
 
-    credit_score = st.number_input('Credit Score', min_value=0, max_value=850)
-    age = st.number_input('Age', min_value=18, max_value=100)
-    balance = st.number_input('Balance', min_value=0.0)
-    estimated_salary = st.number_input('Estimated Salary', min_value=0.0)
+    col1, col2 = st.beta_columns(2)
 
-    geography = st.selectbox('Geography', ['Spain', 'France', 'Germany'])  
-    gender = st.selectbox('Gender', ['Male', 'Female'])  
-    tenure = st.selectbox('Tenure', ['0','1','2','3','4','5','6','7','8','9','10'])  
-    num_of_products = st.number_input('Number of Products', min_value=1, max_value=4, step=1)
-    has_cr_card = st.selectbox('Has Credit Card?', ['Yes', 'No']) 
-    is_active_member = st.selectbox('Is Active Member?', ['Yes', 'No'])  
+    with col1:
+        credit_score = st.number_input('Credit Score', min_value=0, max_value=850)
+        age = st.number_input('Age', min_value=18, max_value=100)
+        balance = st.number_input('Balance', min_value=0.0)
+        estimated_salary = st.number_input('Estimated Salary', min_value=0.0)
+
+    with col2:
+        geography = st.selectbox('Geography', ['Spain', 'France', 'Germany'])  
+        gender = st.selectbox('Gender', ['Male', 'Female'])  
+        tenure = st.selectbox('Tenure', ['0','1','2','3','4','5','6','7','8','9','10'])  
+        num_of_products = st.number_input('Number of Products', min_value=1, max_value=4, step=1)
+        has_cr_card = st.selectbox('Has Credit Card?', ['Yes', 'No']) 
+        is_active_member = st.selectbox('Is Active Member?', ['Yes', 'No'])  
 
     if st.button('Make Prediction'):
         label_encoder = LabelEncoder()
