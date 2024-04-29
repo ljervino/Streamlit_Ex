@@ -13,8 +13,8 @@ def main():
     with col1:
         credit_score = st.number_input('Credit Score', min_value=0, max_value=850)
         age = st.number_input('Age', min_value=18, max_value=100)
-        balance = st.number_input('Balance', min_value=0.0)
-        estimated_salary = st.number_input('Estimated Salary', min_value=0.0)
+        balance = st.slider('Balance', min_value=0.0)
+        estimated_salary = st.slider('Estimated Salary', min_value=0.0)
         tenure = st.selectbox('Tenure', ['0','1','2','3','4','5','6','7','8','9','10'])  
         num_of_products = st.number_input('Number of Products', min_value=1, max_value=4, step=1)
 
