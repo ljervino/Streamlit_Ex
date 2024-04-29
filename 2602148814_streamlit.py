@@ -15,12 +15,12 @@ def main():
         age = st.number_input('Age', min_value=18, max_value=100)
         balance = st.number_input('Balance', min_value=0.0)
         estimated_salary = st.number_input('Estimated Salary', min_value=0.0)
+        tenure = st.selectbox('Tenure', ['0','1','2','3','4','5','6','7','8','9','10'])  
+        num_of_products = st.number_input('Number of Products', min_value=1, max_value=4, step=1)
 
     with col2:
         geography = st.selectbox('Geography', ['Spain', 'France', 'Germany'])  
-        gender = st.selectbox('Gender', ['Male', 'Female'])  
-        tenure = st.selectbox('Tenure', ['0','1','2','3','4','5','6','7','8','9','10'])  
-        num_of_products = st.number_input('Number of Products', min_value=1, max_value=4, step=1)
+        gender = st.selectbox('Gender', ['Male', 'Female']) 
         has_cr_card = st.selectbox('Has Credit Card?', ['Yes', 'No']) 
         is_active_member = st.selectbox('Is Active Member?', ['Yes', 'No'])  
 
