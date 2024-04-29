@@ -8,7 +8,7 @@ model = joblib.load('2602148814.pkl')
 def main():
     st.title('UTS Model Deployment')
 
-    col1, col2 = st.beta_columns(2)
+    col1, col2 = st.columns(2)
 
     with col1:
         credit_score = st.number_input('Credit Score', min_value=0, max_value=850)
