@@ -23,7 +23,7 @@ def main():
     balance = st.slider('Balance', min_value=0.0, max_value=238387.56)
     estimated_salary = st.slider('Estimated Salary', min_value=0.0, max_value=199992.48)
     geography = st.radio('Geography', ['Spain', 'France', 'Germany'])  
-        gender = st.radio('Gender', ['Male', 'Female'])
+    gender = st.radio('Gender', ['Male', 'Female'])
     
     if st.button('Make Prediction'):
         label_encoder = LabelEncoder()
