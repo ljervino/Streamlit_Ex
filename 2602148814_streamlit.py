@@ -17,8 +17,8 @@ def main():
         num_of_products = st.number_input('Number of Products', min_value=1, max_value=4, step=1)
 
     with col2:
-        geography = st.selectbox('Geography', ['Spain', 'France', 'Germany'])  
-        gender = st.selectbox('Gender', ['Male', 'Female']) 
+        geography = st.radio('Geography', ['Spain', 'France', 'Germany'])  
+        gender = st.radio('Gender', ['Male', 'Female']) 
         has_cr_card = st.selectbox('Has Credit Card?', ['Yes', 'No']) 
         is_active_member = st.selectbox('Is Active Member?', ['Yes', 'No'])  
 
